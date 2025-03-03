@@ -10,7 +10,8 @@ const __dirname = dirname(__filename);
 const isGitHubPages = process.env.GITHUB_PAGES === "true";
 
 export default defineConfig({
-  base: isGitHubPages ? "/finalport" : "./",  // Use relative paths
+  base: isGitHubPages ? "/finalport/" : "./",
+
   plugins: [react()],
   resolve: {
     alias: {
