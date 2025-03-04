@@ -22,14 +22,17 @@ export default function AboutSection() {
         >
           <div className="md:order-last flex justify-center">
             <div className="w-55 h-55 rounded-full overflow-hidden shadow-lg border-4 border-primary/20">
-              <img 
-                src="/p10.png" 
-                alt="Profile Image"
-                className="w-full h-full object-cover"
-                onError={(e) => {
-                  e.currentTarget.src = "https://via.placeholder.com/250x250?text=Your+Image";
-                }}
-              />
+              
+            <img 
+  src={`${import.meta.env.BASE_URL}p10.png`} 
+  alt="Profile Image"
+  className="w-full h-full object-cover"
+  onError={(e) => {
+    e.currentTarget.src = "https://via.placeholder.com/250x250?text=Your+Image";
+  }}
+/>
+
+
             </div>
           </div>
 

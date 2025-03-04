@@ -6,9 +6,9 @@
   "private": true,
   "scripts": {
     "dev": "vite --port 5000",
-    "build": "vite build",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d client/dist"
+  "build": "vite build",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d client/dist" 
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.1",

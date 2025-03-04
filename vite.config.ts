@@ -3,14 +3,16 @@ import react from "@vitejs/plugin-react";
 import path from "path";
 
 export default defineConfig({
-  base: "/finalport/", // ✅ Make sure this matches your GitHub repository name
+  base: "/finalport/", // ✅ Ensure this matches your GitHub repo name
   plugins: [react()],
-  root: "client", // ✅ Ensure Vite uses "client" as the root folder
-  build: {
-    outDir: "dist", // ✅ Keep output inside "client/dist"
-    emptyOutDir: true,
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "client/src"),
+    },
   },
-  server: {
-    port: 5000, // ✅ Localhost port for development
+  root: path.resolve(__dirname, "client"),
+  build: {
+    outDir: path.resolve(__dirname, "client/dist"), // ✅ Fix: Output inside client/
+    emptyOutDir: true,
   },
 });
